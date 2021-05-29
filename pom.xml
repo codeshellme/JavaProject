@@ -102,5 +102,12 @@
             <version>1.2.72</version>
         </dependency>
 
+        <dependency>
+            <!--            汉字简码-->
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>2.5.1</version>
+        </dependency>
+
     </dependencies>
 </project>

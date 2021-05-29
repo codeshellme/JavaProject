@@ -4,7 +4,18 @@ import java.util.Random;
 
 public class StringTest {
 
+    public static boolean isNull(Object... objs) {
+        for (Object o: objs) {
+            if (o == null) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
+        System.out.println(isNull(""));
 //
 //        s = s.replaceAll("\\\\", "\\\\\\\\");
 //        System.out.println(s);
@@ -113,9 +124,6 @@ public class StringTest {
 //        int l = s.split("\\|").length;
 //        System.out.println(l);
 //        System.out.println(s.split("\\|")[0]);
-
-        Map<String, Object> m = new HashMap<>();
-        System.out.println(m.get("af"));
     }
 
     private static String deleteFromString(String srcStr, String del) {
