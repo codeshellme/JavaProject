@@ -57,4 +57,4 @@ public class TestThread extends Thread {
 
 // 线程状态：Thread.State 类
 //      其中定义了 6 个线程状态
-//      线程停止之后就不能再次 start 了
+//      线程停止之后就不能再次 start 了，一个线程只能 start 一次
