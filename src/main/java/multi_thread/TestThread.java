@@ -58,3 +58,16 @@ public class TestThread extends Thread {
 // 线程状态：Thread.State 类
 //      其中定义了 6 个线程状态
 //      线程停止之后就不能再次 start 了，一个线程只能 start 一次
+
+// 线程的优先级
+// Thread 类中的三个常量：
+//      MIN_PRIORITY = 1;
+//      NORM_PRIORITY = 5;
+//      MAX_PRIORITY = 10;
+//
+// 三个方法：
+//      setPriority(int xxx)    设置优先级   应该在 start 之前调用
+//      setPriority()           获取优先级
+
+// 守护线程
+// 设置方法 setDaemon(boolean on)   默认是 false，表示用户线程（一般线程都是用户线程）
