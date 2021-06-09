@@ -95,7 +95,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 //          比如同时有多个线程在等待一个锁，当这个锁被释放时，等待时间最久的线程（最先请求的线程）会获得该所，这种就是公平锁
 //　　非公平锁即无法保证锁的获取是按照请求锁的顺序进行的，这样就可能导致某个或者一些线程永远获取不到锁
 //
-//　　在Java中，synchronized就是非公平锁，它无法保证等待的线程获取锁的顺序
+//　　在Java中，synchronized 就是非公平锁，它无法保证等待的线程获取锁的顺序
 //　　而对于ReentrantLock和ReentrantReadWriteLock，它默认情况下是非公平锁，但是可以设置为公平锁
 //          比如 ReentrantLock lock = new ReentrantLock(true);
 //          isFair() 方法判断锁是否是公平锁
