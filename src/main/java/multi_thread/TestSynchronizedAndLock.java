@@ -100,7 +100,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 //          比如 ReentrantLock lock = new ReentrantLock(true);
 //          isFair() 方法判断锁是否是公平锁
 
-public class TestSynchronized {
+public class TestSynchronizedAndLock {
     Lock l;             // 锁
     ReadWriteLock rwk;  // 读写锁
 
