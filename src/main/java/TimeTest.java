@@ -1,3 +1,6 @@
+import sun.util.resources.LocaleData;
+
+import java.time.LocalDate;
 import java.util.*;
 import java.text.*;
 
@@ -15,7 +18,30 @@ public class TimeTest {
      * 获取当前时间戳，单位秒
      */
     public static long getNowTimestamp() {
-        return new Date().getTime()/1000;
+        // return new Date().getTime()/1000;
+        return getNowTimestampMillis() / 1000;
+    }
+
+    /**
+     * 获取当前时间戳，单位毫秒
+     */
+    public static long getNowTimestampMillis() {
+        return System.currentTimeMillis();
+    }
+
+    /**
+     * 获取当前年份的天数
+     */
+    public static int getDaysOfCurrentYear() {
+        return LocalDate.now().lengthOfYear();
+    }
+
+    /**
+     * 获取指定年份的天数
+     * @param year 哪一年
+     */
+    public static int getDaysOfYear(int year) {
+        return LocalDate.of(year, 1, 1).lengthOfYear();
     }
 
     /**
@@ -71,11 +97,18 @@ public class TimeTest {
     }
 
     public static void main(String args[]) {
+        /*
         String nowTime = getNowDate();
         System.out.println("当前时间为: " + nowTime);
         System.out.println("当前时间戳: " + getNowTimestamp());
 
         String date = "1995-11-12 14:00:00.0";
         date = "2020-4-27 14:00:00.0";
+         */
+
+        System.out.println(getDaysOfYear(2011));
+        System.out.println(getDaysOfYear(2012));
+        System.out.println(getDaysOfYear(2013));
+        System.out.println(getDaysOfYear(2014));
     }
 }

@@ -106,7 +106,8 @@ public class TestSynchronizedAndLock {
 
     // Lock lock 方法使用模板：
     /*
-        lock.lock();
+        lock.lock();    // 必须在 try 块之外，不能在里边
+                        // lock 方法与 try 块之间最好不要有任何代码，以免出现异常，导致 unlock 无法执行
         try{
             //处理任务
         }catch(Exception ex){
@@ -120,14 +121,14 @@ public class TestSynchronizedAndLock {
     /*
         if(lock.tryLock()) {
              try{
-                 //处理任务
+                 // 获取到了锁，处理任务
              }catch(Exception ex){
 
              }finally{
                  lock.unlock();   //释放锁
              }
         }else {
-            //如果不能获取锁，则直接做其他事情
+            // 不能获取到锁，则直接做其他事情
         }
      */
 }

@@ -3,7 +3,8 @@ package multi_thread;
 /*
 Java 线程的三种创建方式：
         1，继承 Thread 类
-        2，实现 Runnable 接口
+        2，实现 Runnable 接口，从继承的角度来说，使用 Runnable 接口更好，因为还可以继承其它类
+                            如果使用的是继承 Thread 的方式，就不能再继承其它类了，因为 Java 不支持多继承
         3，实现 Callable 接口
 */
 
