@@ -8,9 +8,18 @@ public class TimeTest {
 
     /**
      * 获取当前日期
+     * - y      yy 表示 2 位年份，yyyy 表示 4 位年份
+     * - M      一般用 MM 表示月份，如果使用 MMM，则会根据语言环境显示不同语言的月份
+     * - d/D    d 表示月份中的天数，一般用 dd 表示天数
+     *          D 表示年份中的天数，表示当天是当年的第几天，用 D 表示
+     * - E      E 表示星期几，会根据语言环境的不同，显示不同语言的星期几
+     * - h/H    h 表示 12 小时制，H 表示 24 小时制（要特别注意）
+     * - m      一般使用 mm 表示分钟数
+     * - s      一般使用 ss 表示秒数
+     * - S      一般使用 SSS 表示毫秒数
      */
     public static String getNowDate() {
-        SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
         return ft.format(new Date());
     }
 
@@ -106,9 +115,10 @@ public class TimeTest {
         date = "2020-4-27 14:00:00.0";
          */
 
-        System.out.println(getDaysOfYear(2011));
-        System.out.println(getDaysOfYear(2012));
-        System.out.println(getDaysOfYear(2013));
-        System.out.println(getDaysOfYear(2014));
+//        System.out.println(getDaysOfYear(2011));
+//        System.out.println(getDaysOfYear(2012));
+//        System.out.println(getDaysOfYear(2013));
+//        System.out.println(getDaysOfYear(2014));
+        System.out.println(getNowDate());
     }
 }
