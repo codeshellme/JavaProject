@@ -123,7 +123,7 @@ public class StringTest {
 //        int l = s.split("\\|").length;
 //        System.out.println(l);
 //        System.out.println(s.split("\\|")[0]);
-        String regist_id = "153839";
+        String regist_id = "166961";
         String sql = "select id, billcode, regist_id, recivefee, realfee, retfee, insurefee, insuraccountfee, bas_paytype_id, cheque, settledep_id, settledby, settledate, hisOrderNo, payfee from clinic_account where regist_id = %s;\n" +
                 "select id, account_id, regist_id, isregist, sickname, rcpdep_id, rcpdoctor_id, exedep_id, fee, discnt, realfee, bas_patienttype_id, bas_patienttype1_id, insurcode, healthcard, invoice, billcode, depart_id, chargedate, chargeby, charged, insurstat, insurefee, insurotherfee, Insurbillcode, insuraccountfee, clinic_invoice_id, clinic_tab_id, payfee, hisorderno, bas_paytype_id, netpay_store_id, netpayret,invoice_billcode,real_invoice from clinic_invoice where regist_id = %s;\n" +
                 "select id, clinic_invoice_id, payfee, bas_paysumby_id, bas_paytype_id, cheque, isfirst from clinic_invoicedet where clinic_invoice_id in (select id from clinic_invoice where regist_id = %s);\n" +
@@ -160,6 +160,8 @@ public class StringTest {
         );
 
         System.out.println(sql0);
+
+        String s = "100zz";
     }
 
     private static String deleteFromString(String srcStr, String del) {
